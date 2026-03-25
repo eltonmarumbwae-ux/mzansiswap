@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MzansiSwap - Post Item</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>MzansiSwap</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="post-item.html">Post Item</a>
+      <a href="auth.html">Login/Register</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2 class="section-title">Post Your Item</h2>
+      <p style="margin-bottom: 20px; color: #6b7280;">
+        Create your listing with title, price, location, photos and a proper description.
+      </p>
+
+      <form id="postItemForm">
+        <div class="form-section">
+          <h3>1. Item Details</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="title">What are you selling? *</label>
+              <input type="text" id="title" placeholder="e.g. iPhone 13 128GB Blue" required />
+            </div>
+
+            <div class="form-group">
+              <label for="category">Category *</label>
+              <select id="category" required>
+                <option value="">Select category</option>
+                <option>Phones</option>
+                <option>Laptops</option>
+                <option>Electronics</option>
+                <option>Furniture</option>
+                <option>Appliances</option>
+                <option>Fashion</option>
+                <option>Vehicles</option>
+                <option>Gaming</option>
+                <option>Home & Garden</option>
+                <option>Sports</option>
+                <option>Books</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="price">Price (ZAR) *</label>
+              <input type="number" id="price" placeholder="e.g. 9500" required />
+              <div class="checkbox-group">
+                <input type="checkbox" id="negotiable" />
+                <label for="negotiable">Negotiable</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="condition">Condition *</label>
+              <select id="condition" required>
+                <option value="">Select condition</option>
+                <option>New</option>
+                <option>Like New</option>
+                <option>Used - Excellent</option>
+                <option>Used - Good</option>
+                <option>Used - Fair</option>
+                <option>Refurbished</option>
+                <option>For Parts</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>2. Location</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="province">Province *</label>
+              <select id="province" required>
+                <option value="">Select province</option>
+                <option>Gauteng</option>
+                <option>Western Cape</option>
+                <option>KwaZulu-Natal</option>
+                <option>Eastern Cape</option>
+                <option>Free State</option>
+                <option>Limpopo</option>
+                <option>Mpumalanga</option>
+                <option>North West</option>
+                <option>Northern Cape</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="city">City / Town *</label>
+              <input type="text" id="city" placeholder="e.g. Johannesburg" required />
+            </div>
+
+            <div class="form-group">
+              <label for="suburb">Suburb / Area *</label>
+              <input type="text" id="suburb" placeholder="e.g. Edenvale" required />
+            </div>
+
+            <div class="form-group">
+              <label for="pickupArea">Safe Meetup Area (Optional)</label>
+              <input type="text" id="pickupArea" placeholder="e.g. Near Greenstone Mall" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>3. Description</h3>
+          <div class="form-group">
+            <label for="description">Describe your item *</label>
+            <textarea id="description" placeholder="Describe condition, age, defects, included accessories, and reason for selling..." required></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>4. Upload Photos</h3>
+          <div class="upload-box">
+            <div class="form-group">
+              <label for="images">Add Photos (1 to 8 images) *</label>
+              <input type="file" id="images" accept="image/*" multiple required />
+            </div>
+            <div class="preview" id="imagePreview"></div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>5. Contact Preference</h3>
+          <div class="form-group">
+            <label for="contactMethod">Preferred Contact Method *</label>
+            <select id="contactMethod" required>
+              <option value="">Select contact method</option>
+              <option>In-app Chat</option>
+              <option>Phone Call</option>
+              <option>WhatsApp</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Publish Listing</button>
+
+        <div class="success-message" id="successMessage">
+          🎉 Listing published successfully! (Frontend demo)
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 MzansiSwap — Post your item safely</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
